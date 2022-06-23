@@ -55,6 +55,7 @@ a {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 /* link decoration */
 a {
   text-decoration: none;
@@ -89,6 +90,7 @@ h3 {
 /*          page studio          */
 /*------header------*/
 /* logo */
+
 .page-header {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
@@ -164,7 +166,16 @@ h3 {
   padding: 200px 0;
   text-align: center;
   background-color:#2F303A;
+
+   max-width: 1600px;
+    min-height: 600px;
+    margin: 0 auto;
+    background-image:linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../imeges/Img-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
 .hero-title {
   margin: 0 auto 30px;
   font-weight: 900;
@@ -210,6 +221,31 @@ h3 {
 .advantages-card {
   width: 270px;
 }
+.advantages-card::before {
+    content:"";
+    display: block;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    background-position: center;
+    margin-bottom: 30px;
+}
+.icon-antena::before {
+    background-image:url(../imeges/group.svg);
+}
+.icon-clock::before {
+    background-image:url(../imeges/clock.svg);
+}
+.icon-diagram::before {
+    background-image:url(../imeges/diagram.svg);
+}
+.icon-astronaut::before {
+    background-image:url(../imeges/astronaut.svg);
+}
+
+
 .advantages-card .list-title {
   margin-bottom: 10px;
 }
@@ -366,11 +402,14 @@ h3 {
 .portfolio-item {
   margin-right: 30px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #eeeeee;
+ 
 }
 .portfolio-content {
   padding: 20px 24px;
   background-color: #ffffff;
+   border-bottom: 1px solid #eeeeee;
+   border-right: 1px solid #eeeeee;
+   border-left: 1px solid #eeeeee;
 }
 .portfolio-item:nth-last-child(-n + 3) {
   margin-bottom: 0;

@@ -181,6 +181,7 @@ h3 {
   max-width: 1600px;
   min-height: 600px;
   margin: 0 auto;
+
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../imeges/Img-background.jpg');
   background-repeat: no-repeat;
@@ -198,6 +199,7 @@ h3 {
   width: 696px;
   color: #ffffff;
 }
+
 .hero-button {
   font-family: inherit;
   cursor: pointer;
@@ -227,29 +229,27 @@ h3 {
   display: flex;
   padding: 0;
 }
-.advantages-card + li {
-  margin-left: 30px;
+.advantages-card:not(:last-child) {
+  margin-right: 30px;
 }
 .advantages-card {
   width: 270px;
 }
 .icon-block {
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   height: 120px;
+  margin-bottom: 30px;
   border-radius: 4px;
   background-color: #f5f4fa;
-  margin-bottom: 30px;
-  padding: 25px 100px;
 }
+
 .advantages-card .list-title {
   margin-bottom: 10px;
 }
-.section-title {
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  margin-bottom: 50px;
-}
+
 .advantages-card > .list-title {
   font-size: 14px;
   line-height: 1.14;
@@ -262,6 +262,13 @@ h3 {
   text-align: center;
   padding-top: 0;
 }
+.section-title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .work-list {
   display: flex;
   padding: 0;
@@ -307,21 +314,22 @@ h3 {
 .team-card .list-title {
   text-align: center;
 }
-.card-content {
-  padding: 30px 0 0;
+.team-thumb {
+  padding: 30px 0;
 }
 .profession {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 /* ---network-block--- */
 
 .network-list {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 16px 32px 30px;
 }
 
 .network-item {
@@ -338,10 +346,10 @@ h3 {
 .network-link {
   width: 44px;
   height: 44px;
-  padding: 12px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   cursor: pointer;
   border: none;
@@ -381,7 +389,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -402,6 +409,7 @@ h3 {
 
 .footer-link {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-section .logo {
@@ -418,10 +426,6 @@ h3 {
 }
 
 .second-column-link {
-  display: flex;
-  flex-direction: column;
-  margin-top: 12px;
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -487,6 +491,7 @@ h3 {
   border: none;
   text-align: center;
   text-transform: none;
+
   background-color: #f5f4fa;
   color: var(--title-text-color);
 }
@@ -498,7 +503,8 @@ h3 {
 .filter-button:focus {
   background: var(--аccent-color);
   color: #ffffff;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* -- portfolio-list -- */
@@ -512,12 +518,17 @@ h3 {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.portfolio-item:hover {
+
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-content {
+.card-thumb {
   padding: 20px 24px;
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
